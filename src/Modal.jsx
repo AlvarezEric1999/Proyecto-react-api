@@ -12,7 +12,7 @@ const Modal = ({messageColor,open,onClose,message}) => {
   
     
 
-    <div className={`${messageColor ? "bg-red-500": "bg-green-400" } w-[400px]  h-[200px] flex items-center justify-center rounded-xl shadow p-6 transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
+    <div className="bg-red-500 flex items-center justify-center rounded-xl shadow p-6 transition-all ">
         <p className='text-white'>{message}</p>
     </div>
 

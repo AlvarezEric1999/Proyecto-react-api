@@ -4,6 +4,7 @@ import Modal from './Modal'
 import { data } from 'autoprefixer'
 import axios from 'axios'
 import { Link,Navigate,useNavigate } from 'react-router-dom'
+import User from './User'
 
 function App() {
  
@@ -22,8 +23,19 @@ function App() {
    console.log(user)
   }
 
+  console.log(open,user)
   
   const validateUser = (event)=>{
+
+
+    if(user.user===undefined){
+
+      setOpen(true)
+
+      setMessage("por favor llena todos los campos")
+
+    }else{
+
 
     event.preventDefault();
     
@@ -44,7 +56,7 @@ function App() {
     }
     
     getUsers();
-  }
+  }}
   return (
     <div>
     <main className="bg-purple-500 w-screen h-screen flex items-center justify-center  ">
@@ -56,7 +68,7 @@ function App() {
 
           <input className="my-[10px] bg-gray-100 p-[8px]" type="text" placeholder="usuario"  name="user" value={user.name} onChange={handleUser}/>
           <input className=" p-[8px] bg-gray-100" type="text" placeholder="contrasena" name="password" value={user.password} onChange={handleUser}/>
-          <button onClick={validateUser} className="my-[10px] text-white	 bg-purple-500 p-[8px]"><a href="./perfil.html" >Iniciar Sesion</a></button>
+          <button onClick={validateUser} className="my-[10px] text-white	 bg-purple-500 p-[8px]"><a  >Iniciar Sesion</a></button>
 
           
       </form>
