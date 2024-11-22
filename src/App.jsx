@@ -32,7 +32,7 @@ function App() {
 
       setOpen(true)
 
-      setMessage("por favor llena todos los campos")
+      setMessage("Por favor llene todos los campos")
 
     }else{
 
